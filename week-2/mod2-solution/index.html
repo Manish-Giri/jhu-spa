@@ -30,29 +30,29 @@
   <div class="row" ng-cloak>
 
     <!-- To Buy List -->
-    <div class="col-md-6" ng-controller="ToBuyController">
+    <div class="col-md-6" ng-controller="ToBuyController as buyer">
      <h2>To Buy:</h2>
      <ul>
-       <li ng-repeat="item in buyItems">
+       <li ng-repeat="item in buyer.buyItems">
          Buy {{item.quantity}} {{item.name}} 
-         <button class="btn btn-default" ng-click="buyThisItem($index)"><span class="glyphicon glyphicon-ok"></span> Bought</button>
+         <button class="btn btn-default" ng-click="buyer.buyThisItem($index)"><span class="glyphicon glyphicon-ok"></span> Bought</button>
        </li>
       <!--        
        <li>Buy 10 cookies <button class="btn btn-default"><span class="glyphicon glyphicon-ok"></span> Bought</button></li>
        <li>Buy 10 cookies <button class="btn btn-default"><span class="glyphicon glyphicon-ok"></span> Bought</button></li> -->
      </ul>
-     <div class="emptyMessage" ng-if="buyItems.length === 0">Everything is bought!</div>
+     <div class="emptyMessage" ng-if="buyer.buyItems.length === 0">Everything is bought!</div>
     </div>
 
     <!-- Already Bought List -->
-    <div class="col-md-6" ng-controller="AlreadyBoughtController">
+    <div class="col-md-6" ng-controller="AlreadyBoughtController as showList">
      <h2>Already Bought:</h2>
      <ul>
-       <li ng-repeat="item in boughtItems">
+       <li ng-repeat="item in showList.boughtItems">
          Bought {{item.quantity}} {{item.name}} 
       </li>
      </ul>
-     <div class="emptyMessage" ng-if="boughtItems.length === 0">Nothing bought yet.</div>
+     <div class="emptyMessage" ng-if="showList.boughtItems.length === 0">Nothing bought yet.</div>
     </div>
   </div>
 </div>

@@ -29,16 +29,18 @@
     });
 
     ShoppingListCheckOff.controller('ToBuyController', ['$scope', 'ShoppingListCheckOffService', function($scope, ShoppingListCheckOffService) {
-        $scope.buyItems = ShoppingListCheckOffService.toBuyItems();
+        var buyer = this;
+        buyer.buyItems = ShoppingListCheckOffService.toBuyItems();
 
-        $scope.buyThisItem = function(idx) {
+        buyer.buyThisItem = function(idx) {
             ShoppingListCheckOffService.buyItem(idx);
         };
     }]);
 
     
     ShoppingListCheckOff.controller('AlreadyBoughtController', ['$scope', 'ShoppingListCheckOffService', function($scope, ShoppingListCheckOffService) {
-        $scope.boughtItems = ShoppingListCheckOffService.boughtItems();
+        var showList = this;
+        showList.boughtItems = ShoppingListCheckOffService.boughtItems();
     }]);
 
 })();
