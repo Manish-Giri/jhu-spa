@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Serif|Lato');
+header {
+    text-align: center;
+    font-family: 'IBM Plex Serif', serif;
+    margin-bottom: 20px;
+}
+
+header h1, header h2 {
+    color: #442f4f;
+}
+
+.cat-link, .cat-items, .items {
+    font-family: 'Lato', sans-serif;
+}
+
+.cat-button {
+    margin-top: 20px;
+    padding: 10px;
+}
