@@ -1,0 +1,9 @@
+<header>
+    <h2>Items in Category {{ $ctrl.items.category }} </h2>
+</header>
+
+<ul class="list-group">
+    <li ng-repeat="item in $ctrl.items.menu_items" class="list-group-item items">
+        {{item.name}}
+    </li>
+</ul>

@@ -1,0 +1,12 @@
+<header>
+    <h2>Our Categories</h2>
+</header>
+
+
+<ul class="list-group">
+    <li ng-repeat="item in $ctrl.items" class="list-group-item cat-items">
+        <a ui-sref="items({category: item.short_name})">{{item.name}}</a>
+    </li>
+</ul>
+
+
